@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="bg-light">
+    
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <div class="row w-100 py-2 align-items-center">
+                <div class="col-4 col-sm-3 col-lg-2 border rounded-circle text-center">
+                    <a class="navbar-brand text-primary" href="./index.html">TepsiBurada</a>
+                </div>
+                <div class="col-8 col-sm-9 col-lg-5 order-lg-1 text-end">
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#account"><i class="fa-solid fa-user"></i> <span class="d-none d-sm-inline-block">Hesabim</span></button>
+                    <div class="offcanvas offcanvas-start text-start" tabindex="-1" id="account" aria-labelledby="accountLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title h4" id="accountLabel">Hesabim</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <form>
+                                <div class="mb-3">
+                                  <label for="accountEmail" class="form-label">Email:</label>
+                                  <input type="email" class="form-control" id="accountEmail" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="accountPassword" class="form-label">Sifre:</label>
+                                  <input type="password" class="form-control" id="accountPassword">
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="signedIn">
+                                  <label class="form-check-label" for="signedIn">Hesabimi acik tut</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Giris Yap</button>
+                                <button type="submit" class="btn btn-primary">Uye Ol</button>
+                              </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-primary"><i class="fa-solid fa-heart"></i> <span class="d-none d-sm-inline-block">Favorilerim</span></button>
+                    <button class="btn btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-sm-inline-block">Sepetim</span></button>
+                </div>
+                <div class="col-12 col-lg-5 mt-lg-0 mt-3">
+                    <form class="d-flex input-group" role="search">
+                    <input class="form-control" type="search" placeholder="Arama" aria-label="Search">
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid bg-primary">
+            <div class="container py-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb det-list m-0">
+                            <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                            <li class="breadcrumb-item"><a href="#">Elektronik</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon</li>
+                        </ol>
+                    </nav>
+            </div>
+        </div>
+      </nav>
+
+    <!-- Main -->
+      <section class="container my-4">
+        <div class="row">
+            <div class="col-xl-4 col-lg-5 mb-3 text-center">
+                <a data-fslightbox href="./img/3-big.jpeg">
+                    <img src="./img/3.jpeg" alt="watch image">
+                </a>
+                <div class="sm-images d-flex gap-3 my-3 justify-content-center">
+                    <a data-fslightbox href="./img/5-big.jpeg">
+                        <img src="./img/5.jpeg" alt="watch image">
+                    </a>
+                    <a data-fslightbox href="./img/4-big.jpeg">
+                        <img src="./img/4.jpeg" alt="watch image">
+                    </a>
+                    <a data-fslightbox href="./img/1-big.jpeg">
+                        <img src="./img/1.jpeg" alt="watch image">
+                    </a>
+                    <a data-fslightbox href="./img/2-big.jpeg">
+                        <img src="./img/2.jpeg" alt="watch image">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-7 ps-sm-4">
+                <h4>Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordon</h4>
+                <div class="rating">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star black"></i></span>
+                </div>
+                <span class="text-success">Stokta</span>
+                <div class="h4 my-3">6.599 TL</div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis nisi sequi officiis corrupti eos id tempora delectus, fugiat aspernatur sed adipisci voluptas provident numquam, ipsum velit itaque voluptates quaerat doloremque vero vitae repellat. Nulla, cupiditate.</p>
+                <dl class="row">
+                    <dt class="col-4">Renk:</dt>
+                    <dd class="col-8">Yıldız Işığı</dd>
+                    <dt class="col-4">Bağlantı Özellikleri:</dt>
+                    <dd class="col-8">GPS</dd>
+                </dl>
+                <div class="row">
+                    <div class="col-7 col-sm-6">
+                        <select class="form-select shadow py-1">
+                            <option selected>Kasa boyutunu seciniz.</option>
+                            <option value="1">41 mm</option>
+                            <option value="2">43 mm</option>
+                            <option value="3">45 mm</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons mt-4">
+                    <a class="btn btn-primary p-2" href="#">
+                        <i class="fa-solid fa-cart-shopping"></i> Sepete Ekle
+                    </a>
+                    <a class="btn btn-warning p-2" href="#">
+                        <i class="fa-regular fa-heart"></i> Favorilere Ekle
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+            <header class="m-0">
+                <h2>Bu ürünler de ilgini cekebilir</h2>
+            </header>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-2 discount">
+                        <a href="#"><i class="heart fa-solid fa-heart p-2 float-end text-muted"></i></a>
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/5.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info mt-2 p-2 border-top">
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a class="btn btn-outline-primary w-100" href="#">Sepete Ekle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-2 discount">
+                        <a href="#"><i class="heart fa-solid fa-heart p-2 float-end text-muted"></i></a>
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/2.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info mt-2 p-2 border-top">
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a class="btn btn-outline-primary w-100" href="#">Sepete Ekle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-2 discount">
+                        <a href="#"><i class="heart fa-solid fa-heart p-2 float-end text-muted"></i></a>
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/4.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info mt-2 p-2 border-top">
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a class="btn btn-outline-primary w-100" href="#">Sepete Ekle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-2 discount">
+                        <a href="#"><i class="heart fa-solid fa-heart p-2 float-end text-muted"></i></a>
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/1.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info mt-2 p-2 border-top">
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a class="btn btn-outline-primary w-100" href="#">Sepete Ekle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary mt-5 py-4">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col-sm-6 col-lg-5 col-xl-4 mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="E-mail">
+                        <button class="btn btn-outline-warning" type="button">Abone Ol</button>
+                      </div>
+                </div>
+                <div class="col-sm-6 col-lg-7 col-xl-8 text-md-end mb-3">
+                    <div class="social-icons">
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-facebook fa-lg"></i>
+                        </a>
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-instagram fa-lg"></i>
+                        </a>
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-x-twitter fa-lg"></i>
+                        </a>
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 text-white">
+                    @2024 TEPSIBURADA Tüm Hakları Saklıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/fslightbox/index.js"> </script>
+</body>
+</html>

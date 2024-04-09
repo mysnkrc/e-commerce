@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tepsiburada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <div class="row w-100 py-2 align-items-center">
+                <div class="col-4 col-sm-3 col-lg-2 border rounded-circle text-center">
+                    <a class="navbar-brand text-primary" href="./index.html">TepsiBurada</a>
+                </div>
+                <div class="col-8 col-sm-9 col-lg-5 order-lg-1 text-end">
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#account"><i class="fa-solid fa-user"></i> <span class="d-none d-sm-inline-block">Hesabim</span></button>
+                    <div class="offcanvas offcanvas-start text-start" tabindex="-1" id="account" aria-labelledby="accountLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title h4" id="accountLabel">Hesabim</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <form>
+                                <div class="mb-3">
+                                  <label for="accountEmail" class="form-label">Email:</label>
+                                  <input type="email" class="form-control" id="accountEmail" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="accountPassword" class="form-label">Sifre:</label>
+                                  <input type="password" class="form-control" id="accountPassword">
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="signedIn">
+                                  <label class="form-check-label" for="signedIn">Hesabimi acik tut</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Giris Yap</button>
+                                <button type="submit" class="btn btn-primary">Uye Ol</button>
+                              </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-primary"><i class="fa-solid fa-heart"></i> <span class="d-none d-sm-inline-block">Favorilerim</span></button>
+                    <button class="btn btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-sm-inline-block">Sepetim</span></button>
+                </div>
+                <div class="col-12 col-lg-5 mt-lg-0 mt-3">
+                    <form class="d-flex input-group" role="search">
+                    <input class="form-control" type="search" placeholder="Arama" aria-label="Search">
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid bg-primary">
+            <div class="container py-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categories" aria-controls="categories" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="categories">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Elektronik</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Moda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kozmetik</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kirtasiye</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Spor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mobilya</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Diger Kategoriler
+                            </a>
+                            <ul class="dropdown-menu bg-primary">
+                                <li><a class="dropdown-item" href="#">Oyuncak</a></li>
+                                <li><a class="dropdown-item" href="#">Petshop</a></li>
+                                <li><a class="dropdown-item" href="#">Dekorasyon</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </nav>
+
+    <!-- Main -->
+    <section class="container my-4 border p-1 rounded">
+        <div class="row">
+            <div class="d-none d-lg-block col-lg-3 overflow-auto" style="height: 300px;">
+                <div class="list-group category-lists">
+                    <a href="#" class="list-group-item list-group-item-action active" data-bs-toggle="offcanvas" data-bs-target="#filters" aria-current="true">Kategoriler</a>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="filters" aria-labelledby="filters-label">
+                        <div class="offcanvas-header pb-1">
+                          <h4 class="offcanvas-title text-decoration-underline" id="filters-label">Filtreler</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <p class="mb-4">Aradiginiz urunun ozelliklerini seciniz.</p>
+                          <div class="accordion" id="filters-accordion">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filters-one" aria-expanded="true" aria-controls="filters-one">
+                                  Markalar
+                                </button>
+                              </h2>
+                              <div id="filters-one" class="accordion-collapse collapse" data-bs-parent="#filters-accordion">
+                                <div class="accordion-body">
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="brands-1" autocomplete="off">
+                                        <label class="btn" for="brands-1">Samsung</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="brands-2" autocomplete="off">
+                                        <label class="btn" for="brands-2">Apple</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="brands-3" autocomplete="off">
+                                        <label class="btn" for="brands-3">Lenovo</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="brands-4" autocomplete="off">
+                                        <label class="btn" for="brands-4">Toshiba</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="brands-5" autocomplete="off">
+                                        <label class="btn" for="brands-5">HP</label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filters-two" aria-expanded="false" aria-controls="filters-two">
+                                  Urun Turu
+                                </button>
+                              </h2>
+                              <div id="filters-two" class="accordion-collapse collapse" data-bs-parent="#filters-accordion">
+                                <div class="accordion-body">
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="products-1" autocomplete="off">
+                                        <label class="btn" for="products-1">Cep Telefonu</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="products-2" autocomplete="off">
+                                        <label class="btn" for="products-2">Bilgisayar</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="products-3" autocomplete="off">
+                                        <label class="btn" for="products-3">Tablet</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="products-4" autocomplete="off">
+                                        <label class="btn" for="products-4">Harddisk</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="products-5" autocomplete="off">
+                                        <label class="btn" for="products-5">Yazici</label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filters-three" aria-expanded="false" aria-controls="filters-three">
+                                  Harddisk Kapasitesi
+                                </button>
+                              </h2>
+                              <div id="filters-three" class="accordion-collapse collapse" data-bs-parent="#filters-accordion">
+                                <div class="accordion-body">
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="storage-1" autocomplete="off">
+                                        <label class="btn" for="storage-1">64 GB</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="storage-2" autocomplete="off">
+                                        <label class="btn" for="storage-2">128 GB</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="storage-3" autocomplete="off">
+                                        <label class="btn" for="storage-3">512 GB</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="storage-4" autocomplete="off">
+                                        <label class="btn" for="storage-4">1 TB</label>
+                                    </div>
+                                    <div class="form-check ps-0">
+                                        <input type="checkbox" class="btn-check" id="storage-5" autocomplete="off">
+                                        <label class="btn" for="storage-5">2 TB</label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filters-four" aria-expanded="false" aria-controls="filters-four">
+                                    Renk
+                                  </button>
+                                </h2>
+                                <div id="filters-four" class="accordion-collapse collapse" data-bs-parent="#filters-accordion">
+                                  <div class="accordion-body">
+                                      <div class="form-check ps-0">
+                                          <input type="checkbox" class="btn-check" id="color-1" autocomplete="off">
+                                          <label class="btn" for="color-1">Beyaz</label>
+                                      </div>
+                                      <div class="form-check ps-0">
+                                          <input type="checkbox" class="btn-check" id="color-2" autocomplete="off">
+                                          <label class="btn" for="color-2">Siyah</label>
+                                      </div>
+                                      <div class="form-check ps-0">
+                                          <input type="checkbox" class="btn-check" id="color-3" autocomplete="off">
+                                          <label class="btn" for="color-3">Mavi</label>
+                                      </div>
+                                      <div class="form-check ps-0">
+                                          <input type="checkbox" class="btn-check" id="color-4" autocomplete="off">
+                                          <label class="btn" for="color-4">Kirmizi</label>
+                                      </div>
+                                      <div class="form-check ps-0">
+                                          <input type="checkbox" class="btn-check" id="color-5" autocomplete="off">
+                                          <label class="btn" for="color-5">Pembe</label>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filters-five" aria-expanded="false" aria-controls="filters-five">
+                                    Degerlendirme Puani
+                                  </button>
+                                </h2>
+                                <div id="filters-five" class="accordion-collapse collapse" data-bs-parent="#filters-accordion">
+                                  <div class="accordion-body">
+                                      <div class="form-check rating">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-1">
+                                        <label class="form-check-label" for="rating-1"><i class="fa-solid fa-star"></i> 4.5 ve uzeri</label>
+                                      </div>
+                                      <div class="form-check rating">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-2">
+                                        <label class="form-check-label" for="rating-2"><i class="fa-solid fa-star"></i> 4 ve uzeri</label>
+                                      </div>
+                                      <div class="form-check rating">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-3">
+                                        <label class="form-check-label" for="rating-3"><i class="fa-solid fa-star"></i> 3 ve uzeri</label>
+                                      </div>
+                                      <div class="form-check rating">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating-4">
+                                        <label class="form-check-label" for="rating-4"><i class="fa-solid fa-star"></i> 2 ve uzeri</label>
+                                      </div>
+                                      <div class="form-check rating">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="rating-5">
+                                        <label class="form-check-label" for="rating-5"><i class="fa-solid fa-star"></i> 1 ve uzeri</label>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-light float-end mt-3">Uygula</button>
+                          </div>
+                        </div>
+                    </div>
+                    <a href="#" class="list-group-item list-group-item-action">Elektronik</a>
+                    <a href="#" class="list-group-item list-group-item-action">Moda</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kozmetik</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kirtasiye</a>
+                    <a href="#" class="list-group-item list-group-item-action">Spor</a>
+                    <a href="#" class="list-group-item list-group-item-action">Mobilya</a>
+                    <a href="#" class="list-group-item list-group-item-action">Dekorasyon</a>
+                    <a href="#" class="list-group-item list-group-item-action">Petshop</a>
+                    <a href="#" class="list-group-item list-group-item-action">Oyuncak</a>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <div id="campaigns" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <a href="#">
+                            <img src="./img/slider-1.jpeg" class="d-block w-100" alt="campaigns image">
+                        </a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="#">
+                            <img src="./img/slider-2.jpeg" class="d-block w-100" alt="campaigns image">
+                        </a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="#">
+                            <img src="./img/slider-3.jpeg" class="d-block w-100" alt="campaigns image">
+                        </a>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#campaigns" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#campaigns" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <header class="m-0">
+                <h2>Son Eklenenler</h2>
+            </header>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <span class="badge fw-bold text-bg-success">indirim</span>
+                        <a class="d-block product-img" href="./detail.html">
+                            <img src="./img/1.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="3"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="./detail.html">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <span class="badge fw-bold text-bg-danger">firsat urunu</span>
+                        <a class="d-block product-img" href="./detail.html">
+                            <img src="./img/2.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="#"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="./detail.html">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <a class="d-block product-img" href="./detail.html">
+                            <img src="./img/3.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="#"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="./detail.html">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <span class="badge fw-bold text-bg-success">indirim</span>
+                        <a class="d-block product-img" href="./detail.html">
+                            <img src="./img/4.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="#"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="./detail.html">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <span class="badge fw-bold text-bg-danger">firsat urunu</span>
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/5.jpeg" alt="watch image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="#"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/iphone-1.jpeg" alt="iphone image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="#"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <span class="badge fw-bold text-bg-success">indirim</span>
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/iphone-2.jpeg" alt="iphone image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="#"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 g-3">
+                    <div class="card p-3 discount">
+                        <a class="d-block product-img" href="#">
+                            <img src="./img/iphone-3.jpeg" alt="iphone image">
+                        </a>
+                        <div class="card-info p-2 border-top">
+                            <a href="#"><i class="fa-solid heart fa-heart border p-2 float-end text-muted"></i></a>
+                            <a class="text-truncate text-start d-block" href="#">Apple Watch Yıldız Işığı Alüminyum Kasa Spor Kordon</a>
+                            <div class="prices text-muted">
+                                <span>6.599 TL</span>
+                                <del>6.999 TL</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary mt-5 py-4">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col-sm-6 col-lg-5 col-xl-4 mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="E-mail">
+                        <button class="btn btn-outline-warning" type="button">Abone Ol</button>
+                      </div>
+                </div>
+                <div class="col-sm-6 col-lg-7 col-xl-8 text-md-end mb-3">
+                    <div class="social-icons">
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-facebook fa-lg"></i>
+                        </a>
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-instagram fa-lg"></i>
+                        </a>
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-x-twitter fa-lg"></i>
+                        </a>
+                        <a class="btn btn-outline-warning" href="#">
+                            <i class="fa-brands fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 text-white">
+                    @2024 TEPSIBURADA Tüm Hakları Saklıdır.
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
